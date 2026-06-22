@@ -585,7 +585,7 @@ const defaultProjects = [
   { id:19, name:"Nathaniel's Role/Task Description",parentId:null, assignee:'Nathaniel', status:'In Progress',  progress:60, startDate:'2025-06-17', lastUpdate:'2025-06-19', dueDate:'2025-06-24', notes:'Assigned Date: Wednesday June 17.' },
 ];
 
-let projects = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null') || defaultProjects;
+let projects = defaultProjects;
 let nextId = Math.max(...projects.map(p => p.id)) + 1;
 let currentFilter = 'all';
 let currentSort = { key: null, asc: true };
